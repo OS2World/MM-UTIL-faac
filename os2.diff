@@ -1,0 +1,31 @@
+diff -EbuNr --strip-trailing-cr configure.in.org configure.in
+--- configure.in.org	2007-08-20 20:03:22.000000000 +0900
++++ configure.in	2008-08-26 13:29:40.000000000 +0900
+@@ -16,6 +16,13 @@
+ AC_PROG_CXX
+ AM_PROG_LIBTOOL
+ 
++dnl OS specific checks and defines
++case "${host_os}" in
++    os2*)
++        LDFLAGS="-no-undefined -Zbin-files"
++        ;;
++esac
++
+ AC_CHECK_HEADERS(getopt.h)
+ 
+ AC_CHECK_TYPES(u_int32_t)
+diff -EbuNr --strip-trailing-cr frontend/main.c.org frontend/main.c
+--- frontend/main.c.org	2007-03-19 21:57:40.000000000 +0900
++++ frontend/main.c	2008-08-25 18:37:38.000000000 +0900
+@@ -54,6 +54,10 @@
+ #include <unistd.h>
+ #endif
+ 
++#ifdef __OS2__
++#include <time.h>
++#endif
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <ctype.h>

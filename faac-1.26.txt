@@ -1,0 +1,28 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: faac-1.26.zip
+       Short Description: faac v1.26 for OS/2
+        Long Description: faac v1.26 for OS/2.
+                          FAAC - Freeware Advanced Audio Coder.
+
+      Proposed directory
+           for placement: /pub/os2/dev/mm
+
+               Your name: KO Myung-Hun
+           Email address: komh@chollian.net
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: (none) 
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: 
+ Additional requirements: kLIBC063
+
+                Replaces: (none)
+
+
+
